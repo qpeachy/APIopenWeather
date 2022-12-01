@@ -27,12 +27,12 @@ public class MainActivity extends AppCompatActivity {
         call.enqueue(new Callback<Forecast>() {
             @Override
             public void onResponse(Call<Forecast> call, Response<Forecast> response) {
-/*                Forecast forecast = response.body();
-                binding.tvTemp.setText(String.valueOf(forecast.getMain().getTemp())+"°C");
+                Forecast forecast = response.body();
+ /*             binding.tvTemp.setText(String.valueOf(forecast.getMain().getTemp())+"°C");
                 binding.tvTempMax.setText(String.valueOf(forecast.getMain().getTempMax()+"°C"));
                 binding.tvTempMin.setText(String.valueOf(forecast.getMain().getTempMin()+"°C"));
                 binding.tvFeelsLike.setText("Ressentie : " + String.valueOf(forecast.getMain().getFeelsLike()+"°C"));
-               binding.tvDescription.setText(String.valueOf(forecast.getWeather().getWeatherList().get(0)));
+                binding.tvDescription.setText(String.valueOf(forecast.getWeather().getWeatherList().get(0)));
                 binding.tvHumidite.setText(String.valueOf(forecast.getMain().getHumidity())+"%");*/
             }
             @Override

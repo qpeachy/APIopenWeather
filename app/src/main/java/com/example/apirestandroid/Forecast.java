@@ -3,22 +3,22 @@ package com.example.apirestandroid;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Forecast  implements Serializable {
     //@SerializedName("main")
     Main main;
-    //@SerializedName("weather")
-    Il weather;
-//    @SerializedName("weather")
-//    Weather weather;
+    @SerializedName("weather")
+    ArrayList<Weather> weathers;
+
     @SerializedName("dt")
     private int datetime;
     //@SerializedName("clouds")
     private double cloudiness;
 
-    public Forecast(Main main, Il weather, int datetime, double cloudiness) {
+    public Forecast(Main main, int datetime, double cloudiness) {
         this.main = main;
-        this.weather = weather;
+
         this.datetime = datetime;
         this.cloudiness = cloudiness;
     }
@@ -31,13 +31,6 @@ public class Forecast  implements Serializable {
         this.main = main;
     }
 
-    public Il getWeather() {
-        return weather;
-    }
-
-    public void setWeather(Il weather) {
-        this.weather = weather;
-    }
 
     public int getDatetime() {
         return datetime;
