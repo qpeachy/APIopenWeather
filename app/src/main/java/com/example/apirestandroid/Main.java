@@ -5,15 +5,15 @@ import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
 
 public class Main implements Serializable {
-    @SerializedName("temp")
+   // @SerializedName("temp")
     private double temp;
-    @SerializedName("temp_min")
+    //@SerializedName("temp_min")
     private double tempMin;
-    @SerializedName("temp_max")
+    //@SerializedName("temp_max")
     private double tempMax;
-    @SerializedName("humidity")
+    //@SerializedName("humidity")
     private double humidity;
-    @SerializedName("feels_like")
+    //@SerializedName("feels_like")
     private double feelsLike;
 
     public double getTemp() {

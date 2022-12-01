@@ -5,16 +5,18 @@ import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
 
 public class Forecast  implements Serializable {
-    @SerializedName("main")
+    //@SerializedName("main")
     Main main;
-    @SerializedName("weather")
-    Weather weather;
+    //@SerializedName("weather")
+    Il weather;
+//    @SerializedName("weather")
+//    Weather weather;
     @SerializedName("dt")
     private int datetime;
-    @SerializedName("alls")
+    //@SerializedName("clouds")
     private double cloudiness;
 
-    public Forecast(Main main, Weather weather, int datetime, double cloudiness) {
+    public Forecast(Main main, Il weather, int datetime, double cloudiness) {
         this.main = main;
         this.weather = weather;
         this.datetime = datetime;
@@ -25,15 +27,31 @@ public class Forecast  implements Serializable {
         return main;
     }
 
-    public Weather getWeather() {
+    public void setMain(Main main) {
+        this.main = main;
+    }
+
+    public Il getWeather() {
         return weather;
+    }
+
+    public void setWeather(Il weather) {
+        this.weather = weather;
     }
 
     public int getDatetime() {
         return datetime;
     }
 
+    public void setDatetime(int datetime) {
+        this.datetime = datetime;
+    }
+
     public double getCloudiness() {
         return cloudiness;
+    }
+
+    public void setCloudiness(double cloudiness) {
+        this.cloudiness = cloudiness;
     }
 }

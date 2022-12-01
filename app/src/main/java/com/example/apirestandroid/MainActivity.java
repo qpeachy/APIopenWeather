@@ -23,17 +23,17 @@ public class MainActivity extends AppCompatActivity {
 
         OpenWeatherServices service =
                 RetrofitClientInstance.getRetrofitInstance().create(OpenWeatherServices. class);
-        Call<Forecast> call = service.getForcast();
+        Call<Forecast> call = service.getForecast();
         call.enqueue(new Callback<Forecast>() {
             @Override
             public void onResponse(Call<Forecast> call, Response<Forecast> response) {
-                Forecast forecast = response.body();
-//                binding.tvTemp.setText(String.valueOf(forecast.getMain().getTemp())+"°C");
-//                binding.tvTempMax.setText(String.valueOf(forecast.getMain().getTempMax()+"°C"));
-//                binding.tvTempMin.setText(String.valueOf(forecast.getMain().getTempMin()+"°C"));
-//                binding.tvFeelsLike.setText("Ressentie : " + String.valueOf(forecast.getMain().getFeelsLike()+"°C"));
-//                binding.tvDescription.setText(forecast.getWeather().getDescription());
-//                binding.tvHumidite.setText(String.valueOf(forecast.getMain().getHumidity())+"%");
+/*                Forecast forecast = response.body();
+                binding.tvTemp.setText(String.valueOf(forecast.getMain().getTemp())+"°C");
+                binding.tvTempMax.setText(String.valueOf(forecast.getMain().getTempMax()+"°C"));
+                binding.tvTempMin.setText(String.valueOf(forecast.getMain().getTempMin()+"°C"));
+                binding.tvFeelsLike.setText("Ressentie : " + String.valueOf(forecast.getMain().getFeelsLike()+"°C"));
+               binding.tvDescription.setText(String.valueOf(forecast.getWeather().getWeatherList().get(0)));
+                binding.tvHumidite.setText(String.valueOf(forecast.getMain().getHumidity())+"%");*/
             }
             @Override
             public void onFailure(Call<Forecast> call, Throwable t) {  Toast.makeText(MainActivity.this, "Une erreur est survenue !",  Toast.LENGTH_SHORT).show();
